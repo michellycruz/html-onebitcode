@@ -6,28 +6,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro da liga dos astronautas</title>
 </head>
+<style>
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    div{
+        padding: 5px;
+    }
+</style>
 <body>
     <h3>Cadastro da liga dos astronautas</h3>
     <form action="cadastro.php" method="get">
-        <label for="inome">Nome:</label>
-        <input type="text" name="nome" id="inome"> <br> <br>
+        <div>
+            <label for="inome">Nome:</label>
+            <input type="text" name="nome" id="inome">
+        </div>
 
-        <label for="iemail">Email:</label>
-        <input type="email" name="email" id="iemail">
-        
-        <label for="isenha">- Senha:</label>
-        <input type="password" name="senha" id="isenha"> <br> <br>
+        <div>
+            <label for="iemail">Email:</label>
+            <input type="email" name="email" id="iemail">
 
-        <label for="inasc">Data de Nascimento</label>
-        <input type="date" name="nasc" id="inasc">
+            <label for="isenha">- Senha:</label>
+            <input type="password" name="senha" id="isenha">
+        </div>
 
-        <label for="ifoto">- Foto:</label>
-        <input type="file" name="foto" id="ifoto"> <br> <br>
+        <div>
+            <label for="inasc">Data de Nascimento</label>
+            <input type="date" name="nasc" id="inasc">
 
-        <label for="inacionalidade">Nacionalidade:</label>
-        <input type="" name="nacionalidade" id="inacionalidade">
+            <label for="ifoto">- Foto:</label>
+            <input type="file" name="foto" id="ifoto">
+        </div>
 
-        <!--descobrir qual input para selecionar opções-->
+        <div>
+            <label for="inacionalidade">Nacionalidade:</label>
+            <select name="nacionalidade" id="inacionalidade">
+                <option value="brasil">Brasil</option>
+                <option value="russia">Russia</option>
+                <option value="china">China</option>
+            </select>
+
+         <!--
+        não existe um input específico para opções, nesse caso usamos o "select > option" como mostrado acima
+        -->
+
+            - Gênero:
+            <label for="female">F</label>
+            <input type="radio" name="genero" id="female" value="female">
+            <label for="male">M</label>
+            <input type="radio" name="genero" id="male" value="male">
+        </div>
+
+        <div>
+            Suas principais qualidades: <br>
+            <label for="int">Inteligência</label>
+            <input type="checkbox" name="int" id="int">|
+            <label for="res">Resiliência</label>
+            <input type="checkbox" name="res" id="res">|
+            <label for="fis">Preparo físico</label>
+            <input type="checkbox" name="fis" id="fis">|
+            <label for="edu">Educação</label>
+            <input type="checkbox" name="edu" id="edu">|
+        </div>
+
+        <textarea name="descricao" id="descricao" cols="30" rows="10" placeholder="Porquê você gostaria de ser um astronauta?"></textarea>
+
+        <p><input type="submit" value="Enviar"></p>
     </form>
 </body>
 </html>
