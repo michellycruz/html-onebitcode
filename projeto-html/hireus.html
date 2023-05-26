@@ -8,7 +8,7 @@
 </head>
 <style>
     div{
-        padding: 10px;
+        padding: 15px 0px;
     }
 </style>
 <body>
@@ -20,39 +20,45 @@
         <hr>
     </header>
 
-    <main>
-        <h3>Hire Us Now</h3>
-        <p>Leave a message to reguest one of our services and we will get back to you as soon as posible.</p>
+    
+        <section>
+            <h3>Hire Us Now</h3>
+            <p>Leave a message to reguest one of our services and we will get back to you as soon as posible.</p>
+        </section>
 
-        <form action="cadastro.php">
-            <div>
-                <label for="iname">Name:</label>
-                <input type="text" name="name" id="iname">
-                <label for="iemail">- Email:</label>
-                <input type="email" name="email" id="iemail">
-            </div>
+        <section>
+            <form action="cadastro.php">
+                <div>
+                    <label for="iname">Name:</label>
+                    <input type="text" name="name" id="iname">
+                    <label for="iemail">- Email:</label>
+                    <input type="email" name="email" id="iemail">
+                </div>
 
-            <div>
-                <label for="ispaceship">Spaceship:</label>
-                <select name="spaceship" id="ispaceship">
-                    <option value="Falcon 9">Falcon 9</option>
-                    <option value="Falcon Heavy">Falcon Heavy</option>
-                </select>
+                <div>
 
-                - Type of Service:
-                <input list="iservice">
+                    <label for="ispaceship">Spaceship:</label>
+                    <select name="spaceship" id="ispaceship">
+                        <option value="Falcon 9">Falcon 9</option>
+                        <option value="Falcon Heavy">Falcon Heavy</option>
+                    </select>
 
-                <datalist id="iservice">
-                    <option value="Sit amet consectetur adipisicing elit."></option>
-                    <option value="Ab exercitationem tenetur quos quibusdam."></option>
-                    <option value="Nesciunt veritatis magni nobis voluptatum"></option>
-                    <option value="Tenetur quos quibusdam quasi officia"></option>
-                </datalist>
-            </div>
-            <div>
-                <input type="submit" value="Send Message">
-            </div>
-        </form>
-    </main>
+
+                    <label for="service">- Type of Service:</label>
+                    <input type="search" name="service" id="service" list="services">
+                    <datalist id="services">
+                        <option value="Sit amet consectetur adipisicing elit."></option>
+                        <option value="Ab exercitationem tenetur quos quibusdam."></option>
+                        <option value="Nesciunt veritatis magni nobis voluptatum"></option>
+                        <option value="Tenetur quos quibusdam quasi officia"></option>
+                    </datalist>
+
+                </div>
+
+                <div>
+                    <input type="submit" value="Send Message">
+                </div>
+            </form>
+        </section>
 </body>
 </html>
